@@ -1,14 +1,5 @@
-# First_Task
-First_Task for C
-
-如下图所示为流水灯控制原理图，请使用C语言编写逻辑代码，实现从左到右的流水灯，间隔时间为500ms。
-
-![water_led](image.png)
-
-示例代码如下：请在 task.c 中编写你的代码。
 
 
-```
 void delay_ms(unsigned int x)  // 延时函数
 {
     unsigned int i,j;
@@ -27,14 +18,13 @@ void delay_ms(unsigned int x)  // 延时函数
 
 int main(void)
 {
-   // 编写你的代码
-
-    
+    """
+    在下方编写你的代码
+    """
     
 
  
 
     return 0;
 }
-```
 
