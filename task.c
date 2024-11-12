@@ -16,15 +16,44 @@ void delay_ms(unsigned int x)  // 延时函数
 // tips: 原理图当中led为低电平点亮，比如点亮LED2,代码为： P0 = 0xFE (1111 1110)
 
 
-int main(void)
+include <INTRINS.H>
+void Delay1ms(unsigned int xms)		//@11.0592MHz
 {
-    """
-    在下方编写你的代码
-    """
-    
+	unsigned char i, j;
 
- 
-
-    return 0;
+	_nop_();
+	while(xms)
+	{
+	
+	i = 2;
+	j = 239;
+	do
+	{
+		while (--j);
+	} while (--i);
+	xms--;
+}
 }
 
+void main()
+{
+	while(1)
+{
+	P2=0xFE;
+	Delay1ms(500);
+	P2=0xFD;
+	Delay1ms(500);
+	P2=0xFB;
+	Delay1ms(500);
+	P2=0xF7;
+	Delay1ms(500);
+	P2=0xEF;
+	Delay1ms(500);
+	P2=0xDF;
+	Delay1ms(500);
+	P2=0xBF;
+	Delay1ms(500);
+	P2=0x7F;
+	Delay1ms(500);
+}
+}
